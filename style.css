@@ -1,0 +1,1775 @@
+/* =========================================================
+   PERSONAL PORTFOLIO WEBSITE
+   FULL RESPONSIVE STYLE.CSS
+
+   Responsive targets:
+   Large Monitor : 1600px+
+   Desktop       : 1200px - 1599px
+   Laptop        : 992px  - 1199px
+   Tablet        : 769px  - 991px
+   Phone         : 481px  - 768px
+   Small Phone   : 480px and below
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   2. MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(92%, 1500px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+
+#header {
+    width: 100%;
+    min-height: 100vh;
+    background: #080808;
+}
+
+
+/* =========================================================
+   4. NAVIGATION
+   ========================================================= */
+
+nav {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 0;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+
+    margin: 10px 18px;
+}
+
+nav ul li a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+
+    position: absolute;
+
+    width: 0;
+    height: 3px;
+
+    left: 0;
+    bottom: -6px;
+
+    background: #ff004f;
+
+    transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-icon,
+.mobile-menu-close {
+    display: none;
+}
+
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+
+.hero-section {
+    width: 100%;
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 0 50px;
+}
+
+
+/* Hero headings */
+
+.hero-section .header {
+    width: 100%;
+
+    margin-bottom: 35px;
+}
+
+.hero-section .header h1 {
+    color: #ff004f;
+
+    font-size: clamp(40px, 4.8vw, 72px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    margin-bottom: 12px;
+}
+
+.hero-section .header h2 {
+    color: #ff004f;
+
+    font-size: clamp(28px, 3.4vw, 52px);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   6. HERO CONTENT
+   ========================================================= */
+
+.hero-section .content {
+    width: 100%;
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 34%)
+        minmax(0, 66%);
+
+    gap: clamp(20px, 2vw, 35px);
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   7. HERO SKILLS
+   ========================================================= */
+
+.hero-section .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-right: 20px;
+}
+
+.hero-section .services h3 {
+    color: #ff004f;
+
+    font-size: clamp(28px, 2.8vw, 44px);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+}
+
+.hero-section .services ul {
+    list-style: none;
+}
+
+.hero-section .services li {
+    color: #ff004f;
+
+    font-size: clamp(18px, 1.5vw, 27px);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-section .services li:hover {
+    color: #fff;
+
+    transform: translateX(7px);
+}
+
+
+/* Data tools */
+
+.hero-section .services .data-tools {
+    font-size: clamp(14px, 1.15vw, 20px);
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   8. HERO IMAGE
+   ========================================================= */
+
+.hero-section .hero-image {
+    width: 100%;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #111;
+}
+
+.hero-section .hero-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 500px;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 25px rgba(255, 0, 79, 0.25);
+}
+
+
+/* =========================================================
+   9. ABOUT
+   ========================================================= */
+
+#about {
+    padding: 90px 0;
+
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+}
+
+.about-col-1 {
+    flex: 1 1 32%;
+}
+
+.about-col-2 {
+    flex: 1 1 58%;
+}
+
+.about-col-1 img {
+    width: 100%;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    object-fit: cover;
+}
+
+.about-col-2 > p {
+    color: #ababab;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. SECTION TITLES
+   ========================================================= */
+
+.sub-title {
+    color: #fff;
+
+    font-size: clamp(38px, 4.5vw, 60px);
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   11. ABOUT TABS
+   ========================================================= */
+
+.tab-titles {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    margin: 35px 0;
+}
+
+.tab-links {
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+
+    width: 0;
+    height: 3px;
+
+    background: #ff004f;
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    transition: width 0.4s ease;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+
+/* =========================================================
+   12. TAB CONTENT
+   ========================================================= */
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents > ul {
+    list-style: none;
+}
+
+.tab-contents > ul > li {
+    list-style: none;
+
+    margin: 15px 0;
+
+    line-height: 1.7;
+}
+
+.tab-contents ul ul {
+    padding-left: 20px;
+}
+
+.tab-contents ul ul li {
+    margin: 10px 0;
+
+    line-height: 1.7;
+}
+
+.tab-contents span {
+    color: #b54769;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.skill-titles {
+    color: #ff004f !important;
+
+    font-size: 18px !important;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   13. SERVICES
+   ========================================================= */
+
+#services {
+    width: 100%;
+
+    padding: 80px 0;
+}
+
+
+/* =========================================================
+   14. SERVICES GRID
+   Desktop / Laptop = 3 x 3
+   ========================================================= */
+
+.services-list {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: clamp(18px, 2vw, 28px);
+
+    margin-top: 45px;
+
+    align-items: stretch;
+}
+
+
+/* Service cards */
+
+.services-list > div {
+    width: 100%;
+
+    min-width: 0;
+
+    background: #262626;
+
+    padding: clamp(24px, 2.2vw, 38px);
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-wrap: break-word;
+
+    transition:
+        background 0.5s ease,
+        transform 0.5s ease;
+}
+
+.services-list > div i {
+    color: #fff;
+
+    font-size: clamp(36px, 3vw, 50px);
+
+    margin-bottom: 22px;
+}
+
+.services-list > div h2 {
+    color: #fff;
+
+    font-size: clamp(20px, 1.6vw, 28px);
+
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    margin-bottom: 16px;
+}
+
+.services-list > div p,
+.services-list .services-paragraphs {
+    color: #ababab;
+
+    font-size: clamp(13px, 0.9vw, 15px);
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+.services-list > div a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    margin-top: 22px;
+
+    width: fit-content;
+}
+
+.services-list > div a:hover {
+    text-decoration: underline;
+}
+
+.services-list > div:hover {
+    background: #ff004f;
+
+    transform: translateY(-8px);
+}
+
+.services-list > div:hover p {
+    color: #fff;
+}
+
+
+/* =========================================================
+   15. PORTFOLIO / SAMPLE WORK
+   ========================================================= */
+
+#portfolio {
+    width: 100%;
+
+    padding: 75px 0;
+}
+
+
+/*
+   Sample Work intentionally uses more screen width
+   than the normal website sections.
+*/
+
+#portfolio .container {
+    width: 98%;
+
+    max-width: 1900px;
+
+    margin: 0 auto;
+
+    padding: 0 6px;
+}
+
+#portfolio .sub-title {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   16. SAMPLE WORK GRID
+   ========================================================= */
+
+.work-list {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    /*
+       Very small space between images
+    */
+
+    gap: 4px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   17. WORK BOX
+   ========================================================= */
+
+.work {
+    width: 100%;
+
+    height: clamp(350px, 27vw, 460px);
+
+    min-width: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #262626;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   18. WORK IMAGE
+   ========================================================= */
+
+.work img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+       Image fills entire box.
+    */
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 4px;
+
+    transition: transform 0.5s ease;
+}
+
+.work:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   19. PORTFOLIO OVERLAY
+   ========================================================= */
+
+.layer {
+    width: 100%;
+    height: 0;
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 0 30px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            #ff004f
+        );
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    transition: height 0.5s ease;
+}
+
+.layer h3 {
+    font-size: 23px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.layer p {
+    line-height: 1.6;
+}
+
+.layer a {
+    width: 55px;
+    height: 55px;
+
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    color: #ff004f;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+
+/* =========================================================
+   20. BUTTONS
+   ========================================================= */
+
+.btn {
+    display: block;
+
+    width: fit-content;
+
+    margin: 45px auto;
+
+    padding: 14px 50px;
+
+    border: 1px solid #ff004f;
+
+    border-radius: 6px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition:
+        background 0.4s ease,
+        transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff004f;
+
+    transform: translateY(-2px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+
+    background: #ff004f;
+}
+
+.btn.btn2:hover {
+    background: transparent;
+}
+
+
+/* =========================================================
+   21. CONTACT
+   ========================================================= */
+
+#contact {
+    padding: 80px 0 0;
+}
+
+.contact-left {
+    flex: 1 1 35%;
+}
+
+.contact-right {
+    flex: 1 1 58%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+
+    font-size: 16px;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-left p i {
+    color: #ff004f;
+
+    margin-right: 15px;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   22. SOCIAL ICONS
+   ========================================================= */
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #ababab;
+
+    text-decoration: none;
+
+    font-size: 30px;
+
+    margin-right: 15px;
+
+    display: inline-block;
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   23. CONTACT FORM
+   ========================================================= */
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    border: 0;
+
+    outline: none;
+
+    background: #262626;
+
+    padding: 15px;
+
+    margin: 15px 0;
+
+    color: #fff;
+
+    font-size: 17px;
+
+    border-radius: 6px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #888;
+}
+
+form textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+form .btn2 {
+    padding: 14px 55px;
+
+    font-size: 17px;
+
+    margin-top: 15px;
+
+    cursor: pointer;
+}
+
+#msg {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #61b752;
+}
+
+
+/* =========================================================
+   24. COPYRIGHT
+   ========================================================= */
+
+.copyright {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    margin-top: 60px;
+
+    background: #262626;
+
+    font-weight: 300;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+.copyright a {
+    color: #fff;
+
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: #ff004f;
+}
+
+
+/* =========================================================
+   25. LARGE MONITORS
+   1600px AND ABOVE
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+    .container {
+        width: min(90%, 1550px);
+    }
+
+
+    /* Hero */
+
+    .hero-section .header h1 {
+        font-size: 72px;
+    }
+
+    .hero-section .header h2 {
+        font-size: 52px;
+    }
+
+    .hero-section .content {
+        grid-template-columns:
+            minmax(340px, 33%)
+            minmax(0, 67%);
+    }
+
+
+    /* Services remain 3 x 3 */
+
+    .services-list {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 28px;
+    }
+
+
+    /* Sample Work */
+
+    #portfolio .container {
+        width: 98%;
+
+        max-width: 1900px;
+    }
+
+    .work-list {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 5px;
+    }
+
+    .work {
+        height: 460px;
+    }
+}
+
+
+/* =========================================================
+   26. DESKTOP
+   1200px - 1599px
+   ========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+    .container {
+        width: 92%;
+
+        max-width: 1450px;
+    }
+
+
+    /* Hero */
+
+    .hero-section .content {
+        grid-template-columns:
+            minmax(300px, 34%)
+            minmax(0, 66%);
+    }
+
+
+    /* Services = 3 x 3 */
+
+    .services-list {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 24px;
+    }
+
+
+    /* Sample Work = 3 across */
+
+    #portfolio .container {
+        width: 98%;
+
+        max-width: none;
+
+        padding: 0 5px;
+    }
+
+    .work-list {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 4px;
+    }
+
+    .work {
+        height: 420px;
+    }
+}
+
+
+/* =========================================================
+   27. LAPTOP
+   992px - 1199px
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .container {
+        width: 94%;
+    }
+
+
+    /* Navigation */
+
+    nav ul li {
+        margin: 10px 12px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+
+    /* Hero */
+
+    .hero-section .header h1 {
+        font-size: 52px;
+    }
+
+    .hero-section .header h2 {
+        font-size: 37px;
+    }
+
+    .hero-section .content {
+        grid-template-columns:
+            minmax(260px, 36%)
+            minmax(0, 64%);
+
+        gap: 20px;
+    }
+
+    .hero-section .services {
+        padding-right: 10px;
+    }
+
+    .hero-section .services h3 {
+        font-size: 31px;
+    }
+
+    .hero-section .services li {
+        font-size: 19px;
+    }
+
+    .hero-section .services .data-tools {
+        font-size: 14px;
+    }
+
+    .hero-section .hero-image,
+    .hero-section .hero-image img {
+        min-height: 460px;
+    }
+
+
+    /* Services still 3 x 3 */
+
+    .services-list {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+    .services-list > div {
+        padding: 22px;
+    }
+
+    .services-list > div h2 {
+        font-size: 21px;
+    }
+
+    .services-list > div p,
+    .services-list .services-paragraphs {
+        font-size: 13px;
+    }
+
+
+    /* Sample Work stays 3 across */
+
+    #portfolio .container {
+        width: 99%;
+
+        max-width: none;
+
+        padding: 0 4px;
+    }
+
+    .work-list {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 3px;
+    }
+
+    .work {
+        height: 360px;
+    }
+
+    .layer {
+        padding: 0 20px;
+    }
+
+    .layer h3 {
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   28. TABLET
+   769px - 991px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 991px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* Navigation */
+
+    nav ul li {
+        margin: 8px 8px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+
+    /* Hero stacks */
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-section .content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .hero-section .services {
+        padding: 0;
+    }
+
+    .hero-section .services li {
+        font-size: 21px;
+    }
+
+    .hero-section .hero-image,
+    .hero-section .hero-image img {
+        min-height: 500px;
+    }
+
+
+    /* About stacks */
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+
+    /* Services = 2 columns */
+
+    .services-list {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    /* Sample Work = 2 columns */
+
+    #portfolio .container {
+        width: 98%;
+
+        padding: 0 5px;
+    }
+
+    .work-list {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 5px;
+    }
+
+    .work {
+        height: 350px;
+    }
+
+
+    /* Contact stacks */
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+}
+
+
+/* =========================================================
+   29. PHONE
+   481px - 768px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    .logo {
+        width: 110px;
+    }
+
+    .menu-icon {
+        display: block;
+
+        font-size: 26px;
+
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: fixed;
+
+        top: 0;
+        right: -220px;
+
+        width: 220px;
+        height: 100vh;
+
+        display: block;
+
+        padding-top: 70px;
+
+        background: #ff004f;
+
+        z-index: 9999;
+
+        transition: right 0.5s ease;
+    }
+
+    nav ul li {
+        display: block;
+
+        margin: 25px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav ul li a::after {
+        background: #fff;
+    }
+
+    .mobile-menu-close {
+        display: block;
+
+        position: absolute;
+
+        top: 20px;
+        left: 20px;
+
+        margin: 0;
+    }
+
+    .mobile-menu-close i {
+        font-size: 25px;
+
+        cursor: pointer;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero-section {
+        min-height: auto;
+
+        padding-top: 20px;
+    }
+
+    .hero-section .header h1 {
+        font-size: 40px;
+    }
+
+    .hero-section .header h2 {
+        font-size: 28px;
+    }
+
+    .hero-section .content {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .hero-section .services {
+        padding: 0;
+    }
+
+    .hero-section .services h3 {
+        font-size: 30px;
+    }
+
+    .hero-section .services li {
+        font-size: 20px;
+    }
+
+    .hero-section .services .data-tools {
+        font-size: 15px;
+    }
+
+    .hero-section .hero-image,
+    .hero-section .hero-image img {
+        min-height: 400px;
+    }
+
+
+    /* About */
+
+    #about {
+        padding: 65px 0;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .tab-titles {
+        gap: 20px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+    }
+
+
+    /* Services = 1 column */
+
+    #services {
+        padding: 60px 0;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .services-list > div {
+        padding: 30px;
+    }
+
+
+    /* Sample Work = 1 column */
+
+    #portfolio .container {
+        width: 100%;
+
+        padding: 0 8px;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .work {
+        height: 360px;
+    }
+
+
+    /* Contact */
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-right {
+        margin-top: 25px;
+    }
+}
+
+
+/* =========================================================
+   30. SMALL PHONE
+   480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    .logo {
+        width: 100px;
+    }
+
+    .menu-icon {
+        display: block;
+
+        font-size: 24px;
+
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: fixed;
+
+        top: 0;
+        right: -210px;
+
+        width: 210px;
+        height: 100vh;
+
+        display: block;
+
+        padding-top: 65px;
+
+        background: #ff004f;
+
+        z-index: 9999;
+
+        transition: right 0.5s ease;
+    }
+
+    nav ul li {
+        display: block;
+
+        margin: 24px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+    }
+
+    nav ul li a::after {
+        background: #fff;
+    }
+
+    .mobile-menu-close {
+        display: block;
+
+        position: absolute;
+
+        top: 18px;
+        left: 20px;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero-section {
+        min-height: auto;
+
+        padding: 20px 0 40px;
+    }
+
+    .hero-section .header {
+        margin-bottom: 25px;
+    }
+
+    .hero-section .header h1 {
+        font-size: 32px;
+
+        line-height: 1.1;
+    }
+
+    .hero-section .header h2 {
+        font-size: 22px;
+
+        line-height: 1.2;
+    }
+
+    .hero-section .content {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .hero-section .services {
+        padding: 0;
+    }
+
+    .hero-section .services h3 {
+        font-size: 27px;
+    }
+
+    .hero-section .services li {
+        font-size: 18px;
+    }
+
+    .hero-section .services .data-tools {
+        font-size: 14px;
+    }
+
+    .hero-section .hero-image,
+    .hero-section .hero-image img {
+        min-height: 320px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    #about {
+        padding: 55px 0;
+    }
+
+    .row {
+        gap: 20px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-2 > p {
+        font-size: 14px;
+    }
+
+    .sub-title {
+        font-size: 34px;
+    }
+
+    .tab-titles {
+        gap: 15px;
+
+        margin: 25px 0;
+    }
+
+    .tab-links {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+       ===================================================== */
+
+    #services {
+        padding: 55px 0;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 30px;
+    }
+
+    .services-list > div {
+        padding: 24px;
+    }
+
+    .services-list > div h2 {
+        font-size: 22px;
+    }
+
+    .services-list > div p,
+    .services-list .services-paragraphs {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       SAMPLE WORK
+       ===================================================== */
+
+    #portfolio {
+        padding: 55px 0;
+    }
+
+    #portfolio .container {
+        width: 100%;
+
+        padding: 0 5px;
+    }
+
+    #portfolio .sub-title {
+        padding-left: 10px;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+
+        margin-top: 15px;
+    }
+
+    .work {
+        height: 300px;
+    }
+
+    .layer {
+        padding: 0 18px;
+    }
+
+    .layer h3 {
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 13px;
+    }
+
+    .layer a {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    #contact {
+        padding: 55px 0 0;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-right {
+        margin-top: 25px;
+    }
+
+    .contact-left p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 26px;
+
+        margin-right: 10px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 12px 32px;
+    }
+
+    form .btn2 {
+        padding: 12px 32px;
+    }
+
+    .copyright {
+        font-size: 13px;
+
+        padding: 20px 10px;
+    }
+}

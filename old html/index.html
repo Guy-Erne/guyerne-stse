@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>Welcome to my website <br>Systems Admainistration  & Big Data Management & Analytics/span></h1>
+                <h3><span>Cloud Computing<br> Virtualization & Cloud </span></h3>
+                <h3><span> System Administration <br> Networking & Security </span></h3>
+                <h3><span>Monitoring & Maintenance<br> Scripting & Automation </span></h3>
+                <h3><span> Storage & Backup <br> ITSM & ITIL  </span></h3>
+                <h3><span> Database<br> User Support</span></h3>
+                <h3><span> Troubleshooting <br> Project Work </span></h3>
+            
+                <br>
+               <!-- -----------  <h3><span><br> </span></h3> ---------- -->
+            </div>
+        </div>
+    </div>
+    <!-- -----------about---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                   <img src="images/Myself1.jpeg"> 
+                    <img src="images/Myself2.jpeg">
+                    <img src="images/Myself3.jpeg">
+
+                <!-- -----------     <img src="images/photo2.png">---------- -->
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> 
+Results-driven IT Operations professional with solid experience in managing enterprise infrastructure, end-user support, and system administration across diverse technology environments. 
+Proven track record of maintaining 99.9% uptime for critical business systems while supporting over 500 internal and external stakeholders. Focused on ensuring reliable system performance 
+and delivering responsive, effective technical support across both internal teams and external users.
+ A responsible, enthusiastic and hardworking professional with excellent communications skills, who enjoys working both as part of a team or independently. Quick learner, with the ability to manage a range of different operations at once. Good analytical skills and a keen eye for detail.Bilingual English/French, I am ready to apply my skills to work for a reputable company.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span class="skill-titles"> CORE TECHNICAL SKILLS   </span><br><br>
+                          <ul> 
+                                <li></li> Operating System: Deep knowledge of Microsoft 365, Active Directory/Entra ID, Microsoft System Center Configuration Manager (SCCM) & Intune, Windows Server, 2012 R2, 2016, 2019 +   & Linux administration (installation, configuration, patching, performance tuning), Scripting with Python, Bash, PowerShell.   </li>
+                                <li> Networking: TCP/IP fundamentals, DNS, DHCP, VPN, routing, and switching., NTP, SMTP, HTTP/HTTPS Firewall and load balancer configuration. Understanding of subnets, VLANs, routing, firewalls, and DNS (both internal and external).Troubleshooting with tools like Wireshark, traceroute, netstat. Hybrid cloud and migration experience. </li>
+                                <li> Virtualization & Cloud: VMware vSphere/ESXi, Understanding concepts like resource allocation, high availability, and vMotion/Live Migration.  Microsoft Hyper-V, Linux KVM (Kernel-based Virtual Machine). Cloud platforms (AWS, Azure, GCP)  Compute, storage, networking. Hybrid cloud and migration experience. Cloud (IaaS): AWS, Azure, or GCP proficiency is now essential. Key skills include: Compute (EC2, VMs, Lambda/Functions).  Networking (VPC, Virtual Networks, Security Groups, Load Balancers) Storage (S3, EBS, Blob Storage) Identity & Access Management (IAM, RBAC).   </li>
+                                <li>  Infrastructure as Code (IaC) & Automation. </li>
+                                <li>  IaC Tools: Terraform, CloudFormation, ARM Templates. </li>
+                                <li>  Scripting: PowerShell (for Windows) and Python or Bash (for Linux). Configuration Management: Ansible, Puppet, or Chef.  </li>
+                                <li>  Storage & Backup: Understanding of SAN, NAS, DAS, iSCSI, Fibre Channel. RAID, and distributed storage.  • Backup/recovery tools and disaster recovery planning. • Experience with storage arrays from vendors like Dell EMC, NetApp, or Pure Storage. • Cloud storage concepts (object, block, file).   </li>
+                                <li>  Security Fundamentals: Understanding of the "shared responsibility model" in the cloud. • Knowledge of security best practices: principle of least privilege, patch management, vulnerability scanning, system hardening (CIS benchmarks), and encryption. Familiarity with security tools like IDS/IPS, WAF, and SIEM.   </li>
+                                <li>   Databases (Support Knowledge): Familiarity with Relational Database (RDBMS) & Non-Relational Database (NoSQL). Backup, replication, and troubleshooting. </li>
+                                <li>  Proven strong written and verbal communication skills. Proficiency in understanding, analyzing, and defining corrective actions from data provided in logs, traces, and heap dumps.
+                                      </li>
+                               <li> IT Service Management (ITSM) & Information Technology Infrastructure Library (ITIL)  
+Proficient in ITSM tools, including incident management, problem management, change management, service request fulfillment, ticketing systems, SLA management, and IT service delivery 
+support. Experienced in using enterprise ITSM platforms to improve operational efficiency, system availability and end-user.  </li>
+                               
+                         </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br><br> IT Systems Administrator     | Intel Corporation           - Dublin, Ireland.<br><br>
+                               
+                            <li><span>2020 - 2021</span><br><br>    Technical Support Engineer   | Screenscene.ie             - Dublin, Ireland. <br><br>
+                            
+                            <li><span>2012 - 2015</span><br><br>   IT Support Engineer         | Metrofile Pty Ltd                   - Cape -Town,South Africa.<br><br>
+                              
+                            <li><span>2010 - 2012</span><br><br>   IT Desktop Support Engineer | DSV Global Transport and Logistics  - Cape-Town,South Africa.<br><br>
+                                <ul>     
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Griffith College | Dublin - Ireland</span><br><br>Master of Science (MSc) in Big Data Management and Analytics .<br><br>
+                                Key Concepts Covered:<br><br>
+                              Big Data Analytics - Concurrent and Parallel Programming - Information Retrieval & Web Search - Research Methods- Applied - Data Analytics Big Data Management-Cloud Computing and-Virtualization - Data Mining Algorithms and Techniques Dissertation by Practice. </li>
+                            <li><span> College of Computing Technology (CCT) | Dublin - Ireland</span><br><br> Bachelor's Honours  Degree in Information Technology .<br>
+                            <li><span> College of Computing Technology (CCT) | Dublin - Ireland</span><br><br> Bachelor's Degree in Information Technology .<br><br>
+                            <li><span> I.T Academy & Skillsoft | Cape town - South Africa </span><br><br> I.T Professional Certificate .<br><br> Concepts Covered:<br><br>
+                                A+ , N+ , Server+ , Security+ , CCNA, CCNP,CISSP, MCSE, MCITP Enterprise Admin , MCITP Server Admin, MCTS Framework , MCSA , SQL, Linux+, Net+.</li>
+                            <li><span> Harold Cressy High School | Cape town - South Africa</span><br><br> National Senior Certificate (NSC) / Leaving Certificate.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------services---------------- -->
+     
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2> Systems Administration  </h2>
+                    <p class="services-paragraphs"> Provide administration for Windows Server, Microsoft 365, and Active Directory / Entra ID. Manage & Maintain User accounts, Groups,
+                         Access control and Permissions. Linux Systems & Server Administration.Group policies (GPOs), managed backup and disaster recovery processes, regularly validating backup
+                      Handle file shares,  integrity and recovery procedures, Manage & Maintain virtualization environments.
+                   </p>
+                    <a href="https://www.servicenow.com/university/what-is-a-sysadmin.html">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2> DevOps & Automation </h2>
+                    <p class="services-paragraphs"> Streamlining workflows using scripting and Infrastructure as Code (IaC) to reduce downtime. Accelerating deployment cycles, minimizing human error, and maximizing system stability
+                         by treating infrastructure configuration explicitly as software. I specialize in leveraging modern Infrastructure as Code (IaC) tools to provision multi-environment architectures programmatically, ensuring absolute
+                         parity between staging and production spaces. By developing modular automation scripts, constructing robust CI/CD deployment pipelines, and implementing configuration management frameworks, I eliminate 
+                         manual intervention from routine server tasks. This highly automated approach drastically shrinks deployment windows, enables rapid rollback capabilities during incidents, and embeds automated
+                         health checks to drastically reduce operational downtime.     
+                    </p>
+                    <a href=" https://kodekloud.com/learning-path/devops-engineer/">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>Network & Security Management</h2>
+                    <p class="services-paragraphs">	Configure and maintain network infrastructure: routers, switches, firewalls, access points, DHCP, and DNS.Analyze logs to identify recurring
+	                    issues and troubleshoot connectivity problems. Manage secure VPN access and access control lists (ACLs); apply security patches and updates to servers and user systems.  Monitor vulnerabilities,
+	                   enforce compliance, and collaborate with security teams to audit infrastructure and prevent breaches. Backup and restore configuration files as needed.   
+                    </p>             
+                    <a href="https://www.eccouncil.org/cybersecurity-exchange/network-security/what-is-network-security/">Learn more</a>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+       <!-- ----------new added start here ------------ -->
+
+     <div class="services-list">
+         <div>
+            <i class="fas fa-code"></i>
+            <h2> Cloud Infrastructure Management</h2>
+                    <p class="services-paragraphs">  Designing, deploying, and maintaining scalable, highly secure environments across major public cloud platforms.
+                        Architecting resilient cloud topologies tailored to business growth and workload fluctuations. I specialize in provisioning multi-tenant or single-tenant virtual environments,
+                         managing network security (VPCs, firewalls, IAM policies), and implementing robust data encryption. My focus is on creating high-performance, cost-optimized setups that effortlessly scale 
+                         alongside user demand while maintaining a strict security posture.
+                  </p>
+
+                    <a href=" https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2> Server Administration</h2>
+                    <p class="services-paragraphs"> Configuring, upgrading, and managing Linux and Windows server environments.Managing the full lifecycle of enterprise server ecosystems across both
+                     Linux (Ubuntu, CentOS, RHEL) and Windows Server environments. I handle end-to-end configuration, bare-metal or virtual provisioning, and routine OS patching to mitigate security
+                      vulnerabilities while maintaining strict uptime. My expertise includes user identity control via Active Directory and IAM, web server optimization (Apache, Nginx, IIS), and file
+                    system management. By continuously tuning kernel and OS-level parameters, I ensure underlying server configurations are robust, performant, and ready to host critical busines applications.
+                   </p>
+                <a href=" https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>Backup & Disaster Recovery (BDR)</h2>
+                    <p class="services-paragraphs">	Implementing strict data protection policies and recovery workflows to prevent data loss.Designing, executing, and auditing comprehensive business continuity 
+                        frameworks to safeguard critical enterprise data against hardware failures, cyber threats, and accidental deletion. I specialize in engineering automated, multi-tiered 
+                        backup strategies incorporating the 3-2-1 backup rule across local storage, immutable network-attached systems, and encrypted cloud repositories. Beyond mere data preservation, I architect
+                         and rigorously test failover workflows, keeping Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) aligned with strict business requirements. By routinely simulating 
+                         infrastructure disasters, ransom scenarios, and system recoveries, I guarantee that organizational data remains highly resilient and rapidly restorable with zero business disruption.
+                  </p>
+              <a href=" https://www.veeam.com/support/training/veeam-university-free.html">Learn more</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ----------new added end here------------ -->
+
+ <!-- ----------portfolio------------ -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Sample Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/p1.PNG" />
+                    <a href="images/Task 1.pdf"><i class=""> </i></a>
+                    <div class="layer">
+                        <h3>First Exploration </h3>
+                        <p>show sample of my work and what i can do.</p>
+                        <a href="images/Task 1.pdf">take me there</a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/p2.PNG" />
+                    <a href="images/Task 2.pdf"><i class=""> </i></a>
+                    <div class="layer">
+                        <h3>Second Exploration </h3>
+                        <p>show sample of my work and what i can do.</p>
+                        <a href="images/Task 2.pdf">take me there</a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/p3.PNG" />
+                    <a href="images/Task 3.pdf"><i class=""> </i></a>
+                    <div class="layer">
+                        <h3>Third Exploration </h3>
+                        <p>show sample of my work and what i can do.</p>
+                        <a href="images/Task 3.pdf">take me there</a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="btn">Scroll Up</a>
+        </div>
+    </div>
+
+    <!------------contact--------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> huuuguyerne@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +353892125003</p>
+                    <div class="social-icons">
+                        <!------------c <a href="https://www.linkedin.com/in/guyerne-assika-eck/"><i class="fab fa-linkedin"></i></a>--------------->
+                        <a href="https://github.com/Guy-Erne?tab=repositories"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>   
+                    </div>
+                    <a href="images/Guyerne.cv.stse.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Guy-Erne. All Right <i class="fas fa-heart"></i> Reserved. <a
+                    href=" https://github.com/Guy-Erne?tab=repositories"> Projects </a></p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzhj9ZvpEURskmjjrVmBq6Mb1fZbY9fGN0YCOKp3Ghn8RI_yFfYtZj9-XR6xR9AZGln/exec' // add your own app script link here
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
